@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cidade Perdida — Aventura Interativa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game">
+    <header class="header">
+      <h1 class="title">Encontrando a Cidade Perdida</h1>
+      <p class="subtitle">Escolha seus caminhos e descubra os segredos escondidos.</p>
+    </header>
+
+    <section class="scene" aria-labelledby="scene-heading">
+      <h2 id="scene-heading" class="sr-only">Cena atual</h2>
+
+      <figure class="scene-media" aria-label="Imagem da cena atual">
+        <img id="scene-image" alt="" loading="lazy" />
+      </figure>
+
+      <div id="story" class="story" role="status" aria-live="polite"></div>
+
+      <div id="choices" class="choices" role="group" aria-label="Opções de ação"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Feito por kauan</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
