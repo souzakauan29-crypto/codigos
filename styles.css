@@ -1,0 +1,140 @@
+:root {
+  --bg-1: #0e4f3d;
+  --bg-2: #0b3b2e;
+  --card: #0f172a;
+  --text: #e6f2ef;
+  --muted: #b7d6ce;
+  --accent: #22c55e;
+  --accent-2: #06b6d4;
+  --danger: #ef4444;
+  --shadow: rgba(0, 0, 0, 0.25);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  color: var(--text);
+  background: linear-gradient(160deg, var(--bg-1), var(--bg-2));
+}
+
+.game {
+  max-width: 920px;
+  margin: 32px auto;
+  padding: 16px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  margin: 0 0 4px 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.3px;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.scene {
+  background: linear-gradient(180deg, #0f172a, #0b1222);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 10px 24px var(--shadow);
+}
+
+.scene-media {
+  margin: 0 0 12px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(120% 120% at 50% 0%, rgba(34,197,94,0.15), rgba(6,182,212,0.10) 40%, transparent 70%);
+  border-radius: 12px;
+  min-height: 180px;
+  overflow: hidden;
+}
+
+#scene-image {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  display: none; /* aparece quando tiver src válido */
+}
+
+.story {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 12px 0 16px 0;
+}
+
+.choices {
+  display: grid;
+  gap: 10px;
+}
+
+.button {
+  appearance: none;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: #0c1a2e;
+  color: var(--text);
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: transform 0.06s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.button:hover {
+  background: #0e223d;
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.18);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--accent-2);
+  outline-offset: 2px;
+}
+
+.button.primary {
+  background: linear-gradient(180deg, #0ea5e9, #06b6d4);
+  color: #02131b;
+  border: none;
+}
+
+.button.primary:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.button.danger {
+  background: linear-gradient(180deg, #f97316, #ef4444);
+  color: #220404;
+  border: none;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  margin: 16px 0 24px;
+  font-size: 0.85rem;
+}
+
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
+
+@media (min-width: 680px) {
+  .choices { grid-template-columns: repeat(2, 1fr); }
+}
